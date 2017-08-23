@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Hover In And Out</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="style.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                    $('img').hover(function () {
+                        $(this).attr('placeholder', $(this).attr('src'));
+                        $(this).attr('src', $(this).attr('data-alt-src'));
+                        console.log('data-alt-src value is', $(this).attr('data-alt-src'));
+                        $(this).attr('data-alt-src', $(this).attr('placeholder'));
+                        //$(this).attr("data-alt-src");console.log('data-alt-src value is', 
+                    });
+                });
+        </script>
+    </head>
+    <body>
+        <div id="container">
+            <h1>Portfolio Pictures</h1>
+            <div class="img-container">
+                <img src="img/image1.jpg" alt="" data-alt-src="img/imageB1.jpg">
+                <img src="img/image2.jpg" alt="" data-alt-src="img/imageB2.jpg">
+                <img src="img/image3.jpg" alt="" data-alt-src="img/imageB3.jpg">
+                <img src="img/image4.jpg" alt="" data-alt-src="img/imageB4.jpg">
+            </div>
+            <div class="img-container">
+                <img src="img/image5.jpg" alt="" data-alt-src="img/imageB5.jpg">
+                <img src="img/image6.jpg" alt="" data-alt-src="img/imageB6.jpg">
+                <img src="img/image7.jpg" alt="" data-alt-src="img/imageB7.jpg">
+                <img src="img/image8.jpg" alt="" data-alt-src="img/imageB8.jpg">
+            </div>
+        </div>
+    </body>
+</html>
